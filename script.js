@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
@@ -17,7 +18,7 @@ var lowerCasedCharacters = "abcdefghijklmnopqrstuvwxyz";
 
 var upperCasedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-
+// This is calling on the user to ether special characters to generate a password
 function generatePassword() {
   var passwordLength = prompt("Enter the lenght of your password");
   console.log(passwordLength);
@@ -37,7 +38,7 @@ function generatePassword() {
 
   var choices = ""
   var final = ""
-
+// this set of conditionals are giving the possible choices to generate a password
   if (hasNumbers) {
     choices += numericCharacters
   } if (hasSpecialCharacters) {
@@ -47,7 +48,7 @@ function generatePassword() {
   } if (hasLowercase) {
     choices += lowerCasedCharacters
   }
-
+// Setting up a loop to give random choices of characters
 for (var i = 0; i < passwordLength; i++) {
   var char = Math.floor(Math.random() * choices.length)
 final += choices[char]}
@@ -58,6 +59,6 @@ final += choices[char]}
 
 
 
-// Add event listener to generate button
+
 
 
